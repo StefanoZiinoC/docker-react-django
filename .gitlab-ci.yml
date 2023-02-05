@@ -9,5 +9,5 @@ compliance_job:
       when: always
   script:
     - echo "Build and run again"
-    - ./deploy
+    - cd deploy/
     - ./init.sh
