@@ -1,0 +1,13 @@
+stages: 
+  - compilance
+
+compliance_job:
+  stage: compliance
+  rules:
+    - changes:
+        - ./frontend-reactjs/src/App.js
+      when: always
+  script:
+    - echo "Build and run again"
+    - ./deploy
+    - ./init.sh
