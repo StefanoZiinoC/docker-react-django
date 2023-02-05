@@ -1,0 +1,21 @@
+# docker-compose created by: sziinocolanino@gmail.com
+# version: 1.0.0
+
+version: "3.3"
+services:
+  # Frontend service
+  web:
+    image: reactjs:latest
+    ports:
+      - "3000:3000"
+    restart: on-failure
+    depends_on:
+      - django
+  # Backend service
+  django: 
+    image: python-django:latest
+    ports:
+      - "8000:8000"
+    restart: on-failure
+
+    # ponerle un volumen al django
