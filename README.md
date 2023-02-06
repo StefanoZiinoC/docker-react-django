@@ -3,15 +3,14 @@
                                         <ReactJs, Django and Docker project>
 
 ### ReactJs
-<!-- [![My Skills](https://skillicons.dev/icons?i=react)](https://skillicons.dev) -->
+
  >Con nuestro frontend en ReactJs nos comunicamos con Django a travez de Axios. De esta forma consumimos el puerto :8000/wel. De esta forma mostramos en pantalla la request que carguemos en Django a travez de los inputs: usuario y password.
 
 ### Django
-<!-- [![My Skills](https://skillicons.dev/icons?i=django)](https://skillicons.dev) -->
 
---Usamos Django para realizar una *REST API* facil y simple, donde podemos llenar dos inputs: usuario y password, esto se almacena en la *DBSQLite*, para luego consumirlo con el frontend-reactjs.
+Usamos Django para realizar una *REST API* facil y simple, donde podemos llenar dos inputs: usuario y password, esto se almacena en la *DBSQLite*, para luego consumirlo con el frontend-reactjs.
 
---Creamos un entorno virutal para mantener las versiones que necesitemos sin colisionar con los demas. Pero vamos a ignorarlo en el .dockerignore. para luego instalar las librerias necesarias dentro del contenedor a la hora de buildear y correr el proyecto.
+Creamos un entorno virutal para mantener las versiones que necesitemos sin colisionar con los demas. Pero vamos a ignorarlo en el .dockerignore. para luego instalar las librerias necesarias dentro del contenedor a la hora de buildear y correr el proyecto.
 
 -Librarie & version installed in docker container:
  - djangorestframework 3.12.4
