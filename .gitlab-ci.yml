@@ -1,13 +1,13 @@
-stages: 
-  - compilance
-
-compliance_job:
-  stage: compliance
-  rules:
-    - changes:
-        - ./frontend-reactjs/src/App.js
-      when: always
+build:
+  image: docker:20.10.16
+  stage: build
+  services:
+    - docker:20.10.16-dind
   script:
-    - echo "Build and run again"
-    - cd deploy/
-    - ./init.sh
+    - docker login -u $USER -p $PASSWORD
+    - cd ./backend/project && docker build -t python-django .
+    - docker tag python-django:latest $USER/python-django:latest
+    - docker push $USER/python-django:latest
+    - cd ../../frontend-reactjs && docker build -t reactjs .
+    - docker tag reactjs:latest $USER/reactjs:latest
+    - docker push $USER/reactjs:latest
